@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: zGUiEZCeRrJE7T5Ob6a9daVrNMFCerEw3Zo6h1HA3I92x/2UNubsmjJQAN0rC75ijeIYShxex/pdF3GBJ5Zj+ebAgoZ+1uA7mNqAuuOBlDgb6l9iqe2CDwBEqEsHHuK46qxFz1FPWfqd7qrm03uAst/v7Pvv7PCB8nxJZ44oTS8=
+  app: stormy-escarpment-5583
+  on:
+    repo: yosukeota/rakuten-ws-rails-sample
