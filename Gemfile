@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 ruby '2.0.0'
 
+group :test do
+  gem 'rake'
+end
+
 gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
