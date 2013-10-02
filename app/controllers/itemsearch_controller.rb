@@ -1,4 +1,5 @@
 class ItemsearchController < ApplicationController
+require_dependency "config.rb"
   def index
     render 'itemsearch/index'
   end
@@ -12,8 +13,8 @@ class ItemsearchController < ApplicationController
 
     begin
       data = httpClient.get_content('https://app.rakuten.co.jp/services/api/IchibaItem/Search/20130805', {
-          'applicationId' => '1098947557275482302',
-          'affiliateId'   => '11b23d62.426bf5af.11b23d63.461ea0d8',
+          'applicationId' => App_id,
+          'affiliateId'   => Affiliate_id,
           'keyword'       => keyword
       })
       @jsonData = JSON.parse data
